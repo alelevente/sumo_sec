@@ -1,0 +1,31 @@
+<city>
+    <general
+        inhabitants="20000"
+        households="10000"
+        childrenAgeLimit="18"
+        retirementAgeLimit="65"
+        carRate="0.58"
+        unemploymentRate="0.05"
+        footDistanceLimit="350"
+        incomingTraffic="10000"
+        outgoingTraffic="1500"
+    />
+    <parameters
+        carPreference="0.50"
+        meanTimePerKmInCity="360"
+        freeTimeActivityRate="0.15"
+        uniformRandomTraffic="0.20"
+        departureVariation="120"
+    />
+    <workHours>
+        <opening hour="21600" proportion="0.10" />
+        <opening hour="28800" proportion="0.40" />
+        <opening hour="32400" proportion="0.40" />
+        <opening hour="36000" proportion="0.10" />
+        
+        <closing hour="50400" proportion="0.125" />
+        <closing hour="57600" proportion="0.50" />
+        <closing hour="61200" proportion="0.30" />
+        <closing hour="72000" proportion="0.075" />
+    </workHours>
+</city>
