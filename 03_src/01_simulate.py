@@ -77,7 +77,7 @@ if __name__ == "__main__":
         files[-1].write("ids,timestamp,position\n")
 
     #main simulation loop:
-    for step in trange(14400, 18400):#50400, 1):
+    for step in trange(14400, 50400, 1):
         step += 10
         for i,sname in enumerate(sim_names):
             traci.switch(sname)
