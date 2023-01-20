@@ -128,3 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 02_data/*
+03_src/occupancies.csv
