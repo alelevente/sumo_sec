@@ -9,7 +9,7 @@ THREADS = 16
 
 
 def measurement_runner(meas_name):
-    os.system('docker run -v "$(pwd)"/dockeroutput:/measurement:z simulator simulate.py --name %s --threads 1'%meas_name)
+    os.system('docker run -v "$(pwd)"/dockeroutput:/measurement:z simulator python3 simulate.py --name %s --threads 1'%meas_name)
 
 
 if __name__ == "__main__":
