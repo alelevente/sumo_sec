@@ -10,6 +10,7 @@ class NeuralNetwork:
             keras.layers.Dense(20, activation="relu"),
             keras.layers.Dense(1, activation="linear")])
         
-        self.model.compile(optimizer="adam", loss="mse")
+        #self.optimizer = keras.optimizers.Adam(learning_rate=0.01)
+        self.model.compile(optimizer="rmsprop", loss="mse")
             
         
