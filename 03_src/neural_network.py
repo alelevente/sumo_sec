@@ -3,7 +3,7 @@ from tensorflow import keras
 
 class NeuralNetwork:
     def __init__(self):
-        n_input = keras.Input(shape=(128,))
+        n_input = keras.Input(shape=(129,))
         self.model = keras.Sequential([n_input,
             keras.layers.Dense(200, activation="relu"),
             keras.layers.Dense(100, activation="relu"),

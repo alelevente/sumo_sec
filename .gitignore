@@ -132,3 +132,4 @@ dmypy.json
 
 build_inputs/
 dockeroutput/
+04_nn_models/
