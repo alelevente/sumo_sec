@@ -129,26 +129,21 @@ def eval_time(infered_time, true_time):
     '''
     return np.abs(infered_time-true_time)
 
-def evaluate_performance(model, oracle, baseline_model, parking_testset, test_t, settings,
+def evaluate_performance(occup, oracle, base_line_occup, settings,
                          true_parkings, true_time):
     '''
         Evaluates the model.
         Parameters:
-             - model: a keras model
+             - occup: occupation data predicted by a participant
              - oracle: oracle dataframe
-             - baseline_model: a model to which we shall compare the performance
-             - parking_testset: parking lots and timestamps encoded for the neural network
-             - test_t: normalized testing times
+             - base_line_occup: occupation data predicted by the federated model
              - settings: a dictionary with min,max,mean,std values
              - true_parkings: list of true parking lots
              - true_time: true moving time
         Returns:
             accuracy, absolute error
     '''
-    
-    occup = model.predict(parking_testset, verbose=0).reshape(len(parking_testset))
-    base_line_occup = baseline_model.predict(parking_testset, batch_size=1000, verbose=0).reshape(len(parking_testset))
-    
+       
     #print("Calculating best parkings....")
     best_parkings = infer_location(occup, base_line_occup, oracle, settings)
     #print("infering time...")
