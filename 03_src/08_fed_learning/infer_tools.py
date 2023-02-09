@@ -84,7 +84,8 @@ def infer_time(occupation, base_occupation, oracle, best_parkings, settings, win
         
         loss_base = np.array(np.mean((oracle_occups-base_occups)**2))
         loss_pred = np.array(np.mean((oracle_occups-pred_occups)**2))
-        loss = loss_base-loss_pred
+        #loss = loss_base-loss_pred
+        loss = loss_pred-loss_base
         #loss = np.std(occup)
         if loss.shape == ():
             parking_losses_time.append(loss)
